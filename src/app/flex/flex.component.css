@@ -1,0 +1,185 @@
+
+
+.main-container{
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to bottom right,rgb(27, 211, 27), rgba(49, 49, 165, 0.863));
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    font-size: large;
+   
+    
+}
+
+
+
+.header{
+ 
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 30px;
+   
+}
+.logo img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+.search-sign{
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ input{
+    height: 30px;
+    font-size: large;
+    border-radius: 5px;
+    border: none;
+}
+
+.sign{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+a  {
+ text-decoration: none;
+}
+
+a button{
+    background-color: rgb(82, 209, 32);
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+}
+
+
+
+.info-container{
+   
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.personal-info{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+
+}
+
+
+
+
+
+.gender{
+    font-size: large;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.gender input{
+    height: auto;
+}
+
+.check-boxs{
+    display: flex;
+    flex-flow:row;
+    flex-wrap:wrap;
+}
+
+.check-boxs input{
+    height: auto;
+}
+
+
+
+.signup-info{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+}
+
+.signup-info a button{
+
+    margin-top: 20px;
+}
+
+.dropdown select, option{
+    font-size: large;
+}
+
+
+
+
+
+.footer{
+   
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.socail-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+
+.socail-icons a{
+    margin-right: 20px;
+}
+
+
+.socail-icons img {
+    height: 40px;
+}
+
+
+
+.next-visit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+.next-visit a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    font-size: larger;
+    
+}
+
+.display{
+    background-image: linear-gradient(to top right, rgb(190, 60, 216),rgba(66, 66, 238, 0.788));
+    height: 100vh;
+}

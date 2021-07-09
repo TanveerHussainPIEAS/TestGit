@@ -1,0 +1,163 @@
+<div class="main-container">
+
+
+    <!-- fxLayout="column" -->
+
+    <div class="header" *ngIf="!submitButtonStatus" >
+        <div class="logo">
+            <img src="https://i1.wp.com/mekdiz.com/wp-content/uploads/2017/07/cropped-logo-blue-white.png?fit=512%2C512" alt="Web Logo">
+        </div>
+        <div class="search-sign">
+            <div class="search-box">
+                <input type="text" placeholder="Search" [(ngModel)]="searchedKeyword"  >
+
+            </div>
+            <div class="sign">
+                <div class="signin">
+                    <a href="#">
+                        <button class="sign-in">Sign In</button>
+                    </a>
+                </div>
+                <div class="signup">
+                    <a href="#">
+                        <button class="sign-up">Sign Up</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="info-container" *ngIf="!submitButtonStatus">
+        <div class="personal-info">
+            <label > First Name: </label>
+            <input type="text" placeholder="enter first name" [(ngModel)]="firstName">          
+            <label > Last Name: </label>
+            <input type="text" placeholder="enter last name" [(ngModel)]="lastName">
+            <label for="birth-day">Your Date of Birth</label>
+            <input type="date"  [(ngModel)]="date">
+
+
+            <div class="gender">
+                <label>Gender:</label>
+                <input type="radio" name="gender" id="male" value="male" >
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="fmale">
+                <label for="fmale">Female</label>
+                <input type="radio" name="gender" id="other" value="other">
+                <label for="other">Other</label>
+
+
+                
+            </div>
+
+                <div class="dropdown">
+                <label for="fields">Choose Field of Study: </label>
+                <select name="fields" id="fields" [(ngModel)]="choosedField">
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Biology">Biology</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Arts">Arts</option>                
+                </select>
+            </div>
+
+        </div>
+
+
+
+        <div class="signup-info">
+
+            <label> E-mail Address</label>
+            <input type="email" placeholder="enter your email" [(ngModel)]="email">
+
+            <label > Password: </label>
+            <input type="password" placeholder="enter your password" [(ngModel)]="passwordEntered">
+            <label > Re-enter Password: </label>
+            <input type="password"  placeholder="re-enter your password" [(ngModel)]="passwordReEntered">
+            <a href="#">
+                <button (click)="onSubmit()">Submit Form</button>
+            </a>
+        </div>
+
+
+
+
+        <div class="check-boxs" *ngFor="let item of checkBoxArray ">
+            <div class="empty">
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="{{item}}">
+                <label for="vehicle1"> I have a {{item}}</label>
+        </div>            
+        </div>
+
+
+    </div>
+
+
+   
+
+
+
+
+    <div class="footer" *ngIf="!submitButtonStatus">
+        <div class="signup-with">
+            <h2>Sign up with: </h2>
+        </div>
+        <div class="socail-icons">
+
+            <a href="#" class="facebook">
+               <img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" alt="Facebook">
+            </a>
+            <a href="#" class="linkedIn">
+                <img src="https://image.flaticon.com/icons/png/512/174/174857.png" alt="LinkedIn">
+            </a>
+            <a href="#" class="gmail">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/512px-Gmail_icon_%282020%29.svg.png" alt="Gmail">
+            </a>
+            <a href="#" class="Twitter">
+                <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" alt="Twitter">
+            </a>
+
+
+        </div>
+
+
+       
+    </div>
+
+
+
+    <div class="next-visit" *ngIf="!submitButtonStatus">
+        <div class="website">
+           <a href="http://mekdiz.com/" target="_blank"> Visite our website</a>
+        </div>
+        <div class="contact">
+            <a href="http://mekdiz.com/home/contact/" target="_blank">Contact Us</a>
+        </div>
+    </div>
+
+
+
+    <hr>
+
+
+    <div class="display" *ngIf="submitButtonStatus">
+        <h1>Data You entered</h1>
+        <h3>You have searched: {{searchedKeyword}}</h3>
+        <h3>Your First Name is: {{firstName}}</h3>
+        <h3>Your Last Name is: {{lastName}}</h3>
+        <h3> Your Date of birth is: {{date}}</h3>
+        <h3> Your Email is: {{email}}</h3>
+        <h3> Field of Study: {{choosedField}}</h3>
+        <h3> Password You Entered: {{passwordEntered}}</h3>
+        <h3> Re-Entered Password: {{passwordReEntered}}</h3>
+
+        <a href="#">
+            <button (click)="onAgaint()">Fill Again</button>
+        </a>       
+
+    </div>
+
+
+
+</div>
